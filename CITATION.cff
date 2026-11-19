@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this report, data or code, please cite it as below."
+title: "The Dynamic Rating at Bweramule, Semliki River, Uganda: a Stage–Discharge Relation that Moves with the River (SFFS Technical Report SEM.9.10)"
+version: "1.0"
+date-released: 2026-10-04
+license: CC-BY-4.0
+type: dataset
+authors:
+  - family-names: "Kakooza"
+    given-names: "Charles"
+    affiliation: "Ministry of Water and Environment, Uganda"
+  - family-names: "Nafula"
+    given-names: "Monica"
+  - family-names: "Kasibante"
+    given-names: "Geoffry"
+  - family-names: "Waiswa"
+    given-names: "Faizal"
+  - family-names: "Zaake"
+    given-names: "Benon"
+    affiliation: "Ministry of Water and Environment, Uganda"
+keywords:
+  - "Semliki River"
+  - "Uganda"
+  - "rating curve"
+  - "stage-discharge relation"
+  - "dynamic rating"
+  - "Kalman filter"
+  - "hydrometry"
+  - "Jones correction"
+  - "hysteresis"
+  - "flood forecasting"
+  - "uncertainty"

@@ -1,0 +1,44 @@
+{
+  "title": "The Dynamic Rating at Bweramule, Semliki River, Uganda: a Stage–Discharge Relation that Moves with the River (SFFS Technical Report SEM.9.10)",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "version": "1.0",
+  "publication_date": "2026-10-04",
+  "creators": [
+    {
+      "name": "Kakooza, Charles",
+      "affiliation": "Ministry of Water and Environment, Uganda"
+    },
+    {
+      "name": "Nafula, Monica"
+    },
+    {
+      "name": "Kasibante, Geoffry"
+    },
+    {
+      "name": "Waiswa, Faizal"
+    },
+    {
+      "name": "Zaake, Benon",
+      "affiliation": "Ministry of Water and Environment, Uganda"
+    }
+  ],
+  "description": "<p>A rating curve turns the level read on a river gauge into a flow, and back. The Semliki Flood Forecasting System (SFFS) of the Ministry of Water and Environment, Uganda, uses the rating at Bweramule (DWRM station 85205) every morning to lock its forecast to the observed flow, to turn forecast flows into levels on the gauge, and to compare them with the stage at which the river leaves its banks. A fixed rating is exact on the day of its last gauging and silently wrong after it if the channel moves — and the Semliki at Bweramule moves.</p>\n<p>This technical report replaces the fixed rating with a dynamic rating: the installed curve plus a stage shift that drifts with time as a random walk, estimated from all 191 gaugings of the station (1950–2025) by a Kalman filter, with a 90 % band that widens every day without a gauging and narrows again at the next one. It also measures the loop that unsteady flow puts into the relation (the Jones correction).</p>\n<p><strong>Key findings.</strong> A drifting rating describes the record far better than a fixed one: on the 176 current-meter gaugings of 1950–75 the log-likelihood rises from 153 to 253, the gauging scatter halves (9.5 % to 4.2 %), and the one-step band is 42 % narrower and equally honest. The drift rate is 6.8 cm per square-root year. At the issue the stage for a given flow was known to ±0.13 m (90 %) against ±0.06 m on the day of the last gauging; an ADCP gauging about every six months would keep the band within ±0.10 m. Unsteady flow barely matters at Bweramule (Jones correction 0.6 % at the 99th-percentile rate of change).</p>\n<p><strong>Contents.</strong> The report (PDF), a Python module and two Jupyter notebooks implementing the Kalman filter and smoother, the maximum-likelihood fit of the drift rate, the modern shift, the growth of the band and the Jones loop correction. The gaugings of the Ministry of Water and Environment are not included (available from the Ministry on request); the notebooks run on a clearly labelled synthetic example.</p>",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "Semliki River",
+    "Uganda",
+    "rating curve",
+    "stage-discharge relation",
+    "dynamic rating",
+    "Kalman filter",
+    "hydrometry",
+    "Jones correction",
+    "hysteresis",
+    "flood forecasting",
+    "uncertainty"
+  ],
+  "notes": "Code and notebooks: MIT licence. Report and data: CC BY 4.0. Discharge gaugings, gauge levels and the hydraulic model of the Ministry of Water and Environment, Uganda, are not included; they are available from the Ministry on request."
+}
