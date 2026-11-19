@@ -1,37 +1,43 @@
 cff-version: 1.2.0
-message: "If you use this report, data or code, please cite it as below."
-title: "The Dynamic Rating at Bweramule, Semliki River, Uganda: a Stage–Discharge Relation that Moves with the River (SFFS Technical Report SEM.9.10)"
-version: "1.0"
-date-released: 2026-10-04
-license: CC-BY-4.0
-doi: 10.5281/zenodo.24367493
-url: "https://zenodo.org/records/24367493"
-type: dataset
+message: "If you use this work, please cite the preprint."
+title: "A dynamic stage–discharge rating for a migrating tropical river: Kalman-filtered rating shifts and their uncertainty at Bweramule, Semliki River, Uganda"
+type: software
+version: "2.0"
+date-released: 2026-11-19
+doi: 10.5281/zenodo.24367492
+license: [CC-BY-4.0, MIT]
+repository-code: "https://github.com/Kaitale/semliki-sem9.10-dynamic-rating"
 authors:
   - family-names: "Kakooza"
     given-names: "Charles"
-    affiliation: "Ministry of Water and Environment, Uganda"
+    affiliation: "Ministry of Water and Environment, Kampala, Uganda"
   - family-names: "Nafula"
     given-names: "Monica"
-    affiliation: "KAI Water & Energy"
+    affiliation: "KAI Water & Energy, Kampala, Uganda"
   - family-names: "Kasibante"
     given-names: "Geoffry"
-    affiliation: "Ministry of Water and Environment, Uganda"
+    affiliation: "Ministry of Water and Environment, Kampala, Uganda"
   - family-names: "Waiswa"
     given-names: "Faizal"
-    affiliation: "Ministry of Water and Environment, Uganda"
+    affiliation: "Ministry of Water and Environment, Kampala, Uganda"
   - family-names: "Zaake"
     given-names: "Benon"
-    affiliation: "Ministry of Water and Environment, Uganda"
-keywords:
-  - "Semliki River"
-  - "Uganda"
-  - "rating curve"
-  - "stage-discharge relation"
-  - "dynamic rating"
-  - "Kalman filter"
-  - "hydrometry"
-  - "Jones correction"
-  - "hysteresis"
-  - "flood forecasting"
-  - "uncertainty"
+    affiliation: "Ministry of Water and Environment, Kampala, Uganda"
+preferred-citation:
+  type: article
+  title: "A dynamic stage–discharge rating for a migrating tropical river: Kalman-filtered rating shifts and their uncertainty at Bweramule, Semliki River, Uganda"
+  doi: 10.5281/zenodo.24367492
+  year: 2026
+  publisher:
+    name: Zenodo
+  authors:
+    - family-names: "Kakooza"
+      given-names: "Charles"
+    - family-names: "Nafula"
+      given-names: "Monica"
+    - family-names: "Kasibante"
+      given-names: "Geoffry"
+    - family-names: "Waiswa"
+      given-names: "Faizal"
+    - family-names: "Zaake"
+      given-names: "Benon"

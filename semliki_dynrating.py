@@ -1,8 +1,8 @@
 """semliki_dynrating.py -- a dynamic stage-discharge rating: a random-walk stage shift on an installed rating,
 estimated from gaugings with a Kalman filter and smoother, plus the Jones loop correction for unsteady flow.
 
-Part of the reproducibility package of SFFS technical report SEM.9.10, "The Dynamic Rating at Bweramule:
-a Stage-Discharge Relation that Moves with the River" (Ministry of Water and Environment, Uganda, 2026).
+Part of the reproducibility package of Kakooza, C., Nafula, M., Kasibante, G., Waiswa, F. and Zaake, B. (2026),
+"A dynamic stage-discharge rating for a migrating tropical river", preprint, https://doi.org/10.5281/zenodo.24367492.
 
 THE MODEL
   Channel change, a time-varying stage shift delta(t) on a base rating Q_base(h):
@@ -13,7 +13,7 @@ THE MODEL
   variance grows by q per year. q and the gauging error sigma_Q are estimated by maximum likelihood.
   Unsteady flow, the Jones loop correction:
       Q = Q_steady(h) * sqrt(1 + (dh/dt) / (S0 * c)),   c = (dQ/dh) / B        kinematic-wave celerity
-Licence: MIT (see LICENSE-CODE).
+Licence: MIT (see LICENSE).
 """
 import math
 import numpy as np

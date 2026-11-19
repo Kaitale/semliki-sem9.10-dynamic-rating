@@ -1,36 +1,57 @@
-# The Dynamic Rating at Bweramule: a Stage–Discharge Relation that Moves with the River
+# A dynamic stage–discharge rating for a migrating tropical river: Kalman-filtered rating shifts and their uncertainty at Bweramule, Semliki River, Uganda
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24367493.svg)](https://doi.org/10.5281/zenodo.24367493)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24367492.svg)](https://doi.org/10.5281/zenodo.24367492) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Kaitale/semliki-sem9.10-dynamic-rating/blob/main/reproduce_paper.ipynb)
 
-**SFFS Technical Report SEM.9.10, version 1.0 (4 October 2026)** — Semliki Flood Forecasting System, Ministry of Water and Environment, Uganda.
+**Charles Kakooza (Ministry of Water and Environment); Monica Nafula (KAI Water & Energy); Geoffry Kasibante (Ministry of Water and Environment); Faizal Waiswa (Ministry of Water and Environment); Benon Zaake (Ministry of Water and Environment)**
 
-The report replaces the fixed rating at Bweramule (Semliki River, DWRM 85205) with a dynamic rating: the installed curve plus a stage shift that drifts as a random walk, estimated from all 191 gaugings (1950–2025) by a Kalman filter, with a 90 % band that widens without gaugings and narrows at each new one, and the Jones correction for unsteady flow.
+Preprint (not peer reviewed), version 2.0, 19 November 2026, prepared to the author guidelines of *Journal of Hydrology: Regional Studies*.
 
-**Key findings:** a drifting rating halves the gauging scatter of 1950–75 (9.5 % to 4.2 %) and raises the log-likelihood from 153 to 253; the drift rate is 6.8 cm per √year; at the issue the stage for a given flow was known to ±0.13 m (90 %), and an ADCP gauging about every six months would keep it within ±0.10 m; the Jones correction is under 1 % at Bweramule.
+## Abstract
 
-## Files
+**Study region:** The Semliki River at Bweramule (6,634 km²), on the Uganda–Democratic Republic of Congo border between Lake Edward and Lake Albert: the forecast point of an operational flood forecasting system, on a meander bend that migrates up to 11 m a year.
+
+**Study focus:** A fixed stage–discharge rating is exact on the day of its last gauging and silently wrong afterwards if the control moves. We replace it with a dynamic rating – the installed curve plus a stage shift that follows a random walk – estimated from 176 current-meter gaugings (1950–1975) and 11 ADCP gaugings (2024–2025) with a Kalman filter and smoother, the drift rate and gauging error fitted by maximum likelihood. Its 90 % band widens every day without a gauging. We test it against a fixed rating by one-step-ahead prediction, and measure the loop from unsteady flow with the Jones formula against an unsteady HEC-RAS hindcast.
+
+**New hydrological insights for the region:** The control at Bweramule drifts at 6.8 cm per square-root year. The dynamic rating raises the log-likelihood of the 1950–1975 gaugings from 153 to 253 (AIC −304 to −503), halves the gauging scatter (9.5 to 4.2 %) and predicts each next gauging with a 90 % band 42 % narrower (±0.10 against ±0.17 m) that is equally reliable. The control stood about 0.17 m low in 1950–1956 and 0.17 m high by 1975. In October 2026, 375 days after the last gauging, the stage for a given flow is known to ±0.13 m (about ±6 % in flow); a gauging every six months would hold it at ±0.10 m. Hysteresis is small: at the 99th-percentile rate of stage change the Jones correction is 0.6 %, and HEC-RAS agrees.
+
+## Reproduce the paper
+
+One notebook, top to bottom:
+
+```bash
+pip install -r requirements.txt
+jupyter lab reproduce_paper.ipynb      # then Run All
+```
+
+or open it in [Google Colab](https://colab.research.google.com/github/Kaitale/semliki-sem9.10-dynamic-rating/blob/main/reproduce_paper.ipynb); the notebook downloads anything it needs from this repository.
+
+## Contents
 
 | File | What it is |
 |---|---|
-| `SEM.9.10.R.1.0.SFFS.Dynamic.Rating.Bweramule.pdf` | The technical report |
-| `semliki_dynrating.py` | Kalman filter and RTS smoother for a random-walk stage shift, maximum-likelihood drift rate, rating with a 90 % band, band growth, Jones correction |
-| `01_dynamic_rating_kalman.ipynb` | Fit, smoothed shift, fixed-against-drifting comparison, modern shift, band growth |
-| `02_jones_loop_correction.ipynb` | The Jones loop correction with the report's slope and width |
+| `Kakooza_et_al_2026_Bweramule_dynamic_rating_preprint.pdf` | the paper |
+| `reproduce_paper.ipynb` | the one notebook: reproduces Tables 4–5, Fig. 5 and the Jones corrections, and runs the full estimation on a synthetic record or on your own gaugings (seconds) |
+| `semliki_dynrating.py` | Kalman filter, RTS smoother, maximum-likelihood drift rate, rating with band, Jones correction |
+| `rating_R2026-10_table.csv` | the installed rating R2026-10 at Bweramule (stage on the ADCP staff gauge, m; discharge, m³/s) |
+| `requirements.txt` | numpy, matplotlib |
 
-Run with Python 3.10+ and `pip install -r requirements.txt`.
+## Data not included
 
-**Data not included.** The 191 gaugings at Bweramule (DWRM 85205) are held by the Ministry of Water and Environment, Uganda, and are available from the Ministry on request. The notebooks run on a synthetic example (clearly labelled) with a drift rate and gauging error close to those of the report; set `GAUGINGS` to a CSV with columns `date, stage_m, Q_m3s, era` to use real data.
-
-## Authors
-
-Charles Kakooza, Monica Nafula, Geoffry Kasibante, Faizal Waiswa and Benon Zaake.
-
-Prepared under the Semliki Flood Forecasting System (SFFS) of the Ministry of Water and Environment (MWE), Uganda, with support from the World Food Programme (WFP).
-
-## Licence
-
-Report and data: CC BY 4.0. Code and notebooks: MIT. See `LICENSE`.
+The Bweramule gaugings, telemetry and HEC-RAS model are held by the Ministry of Water and Environment, Uganda, and are available on request; with them, the last cell of the notebook reproduces Table 3 and Figs. 2–3.
 
 ## How to cite
 
-Zenodo record: https://doi.org/10.5281/zenodo.24367493 (report, data and notebooks). See also `CITATION.cff`.
+Kakooza, C., Nafula, M., Kasibante, G., Waiswa, F., Zaake, B., 2026. A dynamic stage–discharge rating for a migrating tropical river: Kalman-filtered rating shifts and their uncertainty at Bweramule, Semliki River, Uganda. Preprint, version 2.0. Zenodo. https://doi.org/10.5281/zenodo.24367492
+
+## Licence
+
+Manuscript and data: CC BY 4.0. Code: MIT. See `LICENSE`.
+
+## Funding
+
+Carried out under the Semliki Flood Forecasting System of the Ministry of Water and Environment, Uganda, with support from the World Food Programme.
+
+## Version history
+
+* **2.0** (19 Nov 2026): the work as a journal-style preprint with one reproduction notebook.
+* 1.x (Oct 2026): the original technical report and analysis notebooks (superseded).
