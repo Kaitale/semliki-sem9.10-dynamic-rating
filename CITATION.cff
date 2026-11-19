@@ -4,6 +4,8 @@ title: "The Dynamic Rating at Bweramule, Semliki River, Uganda: a Stage–Discha
 version: "1.0"
 date-released: 2026-10-04
 license: CC-BY-4.0
+doi: 10.5281/zenodo.24367493
+url: "https://zenodo.org/records/24367493"
 type: dataset
 authors:
   - family-names: "Kakooza"
@@ -11,10 +13,13 @@ authors:
     affiliation: "Ministry of Water and Environment, Uganda"
   - family-names: "Nafula"
     given-names: "Monica"
+    affiliation: "KAI Water & Energy"
   - family-names: "Kasibante"
     given-names: "Geoffry"
+    affiliation: "Ministry of Water and Environment, Uganda"
   - family-names: "Waiswa"
     given-names: "Faizal"
+    affiliation: "Ministry of Water and Environment, Uganda"
   - family-names: "Zaake"
     given-names: "Benon"
     affiliation: "Ministry of Water and Environment, Uganda"

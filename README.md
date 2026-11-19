@@ -1,5 +1,7 @@
 # The Dynamic Rating at Bweramule: a Stage–Discharge Relation that Moves with the River
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24367493.svg)](https://doi.org/10.5281/zenodo.24367493)
+
 **SFFS Technical Report SEM.9.10, version 1.0 (4 October 2026)** — Semliki Flood Forecasting System, Ministry of Water and Environment, Uganda.
 
 The report replaces the fixed rating at Bweramule (Semliki River, DWRM 85205) with a dynamic rating: the installed curve plus a stage shift that drifts as a random walk, estimated from all 191 gaugings (1950–2025) by a Kalman filter, with a 90 % band that widens without gaugings and narrows at each new one, and the Jones correction for unsteady flow.
@@ -31,4 +33,4 @@ Report and data: CC BY 4.0. Code and notebooks: MIT. See `LICENSE`.
 
 ## How to cite
 
-See `CITATION.cff`, or the DOI of the Zenodo record of this repository.
+Zenodo record: https://doi.org/10.5281/zenodo.24367493 (report, data and notebooks). See also `CITATION.cff`.
